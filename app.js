@@ -9,6 +9,7 @@ var app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.set('view engine', 'jade');
 
 async function timeout(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
